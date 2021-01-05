@@ -20,6 +20,7 @@
 
 ## mirror
 * crates.io: ruby mirror
+  * usage: `cp ./crates.io ~/.cargo/config`
 
 ## qemu
 * shrunk.sh: compress qemu disk file
