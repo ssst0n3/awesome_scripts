@@ -1,0 +1,11 @@
+#!/usr/bin/expect
+
+set timeout -1
+
+spawn ssh -o StrictHostKeyChecking=no ctf@10.0.1.1
+
+expect "assword:"
+
+send "SqjaVwE9\r"
+
+interact

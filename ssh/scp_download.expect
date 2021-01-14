@@ -1,0 +1,15 @@
+#!/usr/bin/expect -f
+
+set timeout -1
+
+set arg1 [lindex $argv 0]
+
+spawn scp -o StrictHostKeyChecking=no ctf@10.0.1.1:$arg1 ./
+
+expect "assword:"
+
+send "SqjaVwE9\r"
+
+
+
+interact
