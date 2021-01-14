@@ -25,3 +25,11 @@
 ## qemu
 * shrunk.sh: compress qemu disk file
   * usage: `./shrunk.sh <DISK FILE PATH>`
+
+## ssh
+* login.expect: login into ssh server
+  * usage: `./login.expect`
+* scp_download.expect
+  * usage: `./scp_download.expect <REMOTE FILE PATH>`
+* scp_upload.expect
+  * usage: `./scp_upload.expect <LOCAL FILE PATH> <REMOTE FILE PATH>`
