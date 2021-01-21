@@ -1,6 +1,8 @@
 # awesome scripts
 
 ## docker
+* container_netstat.sh: run netstat -anp in container without install any tools
+  * usage: `./container_netstat.sh <CONTAINER ID>`
 * copy_file_from_image.sh
   * usage: `./copy_file_from_image.sh <Image Name> <Image File Path> <Host Saved Path>`
 * Dockerfile_builder_golang*: build golang project in docker
