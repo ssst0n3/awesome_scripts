@@ -7,6 +7,11 @@
   * usage: `./copy_file_from_image.sh <Image Name> <Image File Path> <Host Saved Path>`
 * Dockerfile_builder_golang*: build golang project in docker
 * logout_swr_south.sh: logout from swr
+* compose files: https://docs.docker.com/compose/extends/
+  * docker-compose.yml: base file
+  * docker-compose.override.yml: dev configuration
+  * docker-compose.prod.yml: for production
+  * docker-compose.admin.yml: run a container for administrative tasks
 
 ## git
 * .gitignore: gitignore file template

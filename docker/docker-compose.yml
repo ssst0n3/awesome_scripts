@@ -1,0 +1,53 @@
+version: '3'
+services:
+  secret:
+    image: ssst0n3/docker_secret
+    environment:
+      - "DIR_SECRET=/secret"
+      - "SECRET=MYSQL_PASSWORD_FILE,MYSQL_ROOT_PASSWORD_FILE,CERT_GIN_TLS"
+    volumes:
+      - myapp_secret:/secret
+  myapp:
+    depends_on:
+      - secret
+    image: myapp:v1
+    restart: always
+    ports:
+      - "14000:14000"
+    environment:
+      LOCAL_LISTEN_PORT: 14000
+      WAIT_HOSTS: db:3306
+      WAIT_HOSTS_TIMEOUT: 300
+      WAIT_SLEEP_INTERVAL: 5
+      WAIT_HOST_CONNECT_TIMEOUT: 5
+      DB_DRIVER_NAME: mysql
+      DB_NAME: myapp
+      DB_HOST: db
+      DB_PORT: 3306
+      DB_USER: myapp
+      DB_PASSWORD_FILE: /secret/MYSQL_PASSWORD_FILE
+      DIR_SECRET: /secret
+    volumes:
+      - myapp_secret:/secret
+  db:
+    depends_on:
+      - secret
+    image: mysql
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    volumes:
+      - ./db/init.sql:/docker-entrypoint-initdb.d/init.sql
+      - ./db/data:/tmp/data
+      - myapp_db:/var/lib/mysql
+      - myapp_secret:/secret
+    environment:
+      MYSQL_ROOT_PASSWORD_FILE: /secret/MYSQL_ROOT_PASSWORD_FILE
+      MYSQL_PASSWORD_FILE: /secret/MYSQL_PASSWORD_FILE
+      MYSQL_USER: myapp
+      MYSQL_DATABASE: myapp
+    ports:
+      - "14306:3306"
+
+volumes:
+  myapp_db:
+  myapp_secret:
