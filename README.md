@@ -10,8 +10,11 @@
 * compose files: https://docs.docker.com/compose/extends/
   * docker-compose.yml: base file
   * docker-compose.override.yml: dev configuration
+    * usage: `docker-compose up -d`
   * docker-compose.prod.yml: for production
+    * usage: `docker-compose -f docker-compose.yml -f docker-compose.prod.yml up -d`
   * docker-compose.admin.yml: run a container for administrative tasks
+    * usage: `docker-compose -f docker-compose.yml -f docker-compose.admin.yml up -d`
 
 ## git
 * .gitignore: gitignore file template
