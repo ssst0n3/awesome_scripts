@@ -17,7 +17,8 @@
     * usage: `docker-compose -f docker-compose.yml -f docker-compose.admin.yml up -d`
 
 ## git
-* .gitignore: gitignore file template
+* gitignore: gitignore file template
+* git_init.sh: clean all commits and git history, re commit current status to repository
 
 ## golang
 * test.sh: golang test script, do not use testcache, single thread
