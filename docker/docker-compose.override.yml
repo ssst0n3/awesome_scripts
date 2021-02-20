@@ -5,10 +5,13 @@ services:
       - "DEVELOPMENT=true"
     volumes:
       - /tmp/secret:/tmp/secret
-  dkdk:
+  myapp:
     build: .
   adminer:
     image: adminer
     restart: always
     ports:
       - "8080:8080"
+  db:
+    ports:
+      - "13306:3306"

@@ -45,8 +45,6 @@ services:
       MYSQL_PASSWORD_FILE: /secret/MYSQL_PASSWORD_FILE
       MYSQL_USER: myapp
       MYSQL_DATABASE: myapp
-    ports:
-      - "14306:3306"
 
 volumes:
   myapp_db:
