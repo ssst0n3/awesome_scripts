@@ -26,6 +26,8 @@
 * test.sh: golang test script, do not use testcache, single thread
 
 ## linux
+* clean_journal_logs.sh
+  * usage: `sudo clean_journal_logs.sh`
 * clean_memory_cache.sh
   * usage: `sudo clean_memory_cache.sh`
 * list_listening_ports-lsof.sh
