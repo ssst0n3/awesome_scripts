@@ -1,4 +1,3 @@
 #!/bin/bash
-# borrowed from https://linuxhint.com/removing_cache_chrome/
-rm -r ~/.config/google-chrome/Default
+# https://chromium.googlesource.com/chromium/src/+/master/docs/user_data_dir.md
 rm -r ~/.cache/google-chrome/Default
