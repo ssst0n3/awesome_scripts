@@ -23,6 +23,7 @@
 * git_init.sh: clean all commits and git history, re commit current status to repository
 
 ## golang
+* clean.sh: clean golang's cache
 * test.sh: golang test script, do not use testcache, single thread
 
 ## linux
