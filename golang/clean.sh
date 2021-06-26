@@ -1,2 +1,2 @@
 #!/bin/bash
-go clean -modcache
+go clean -testcache -cache
