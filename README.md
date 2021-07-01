@@ -17,6 +17,9 @@
   * usage: `cp dockerignore <PROJECT_DIR>/.dockerignore`
 * Dockerfile_builder_golang*: build golang project in docker
 * logout_swr_south.sh: logout from swr
+* make_dockerhub_repository_active.sh: re active the dockerhub image
+  * usage: `./make_dockerhub_repository_active.sh <REPOSITORY>`
+    * or `./make_dockerhub_repository_active.sh <REPOSITORY> <TAG>`
 
 ## git
 * gitignore: gitignore file template
