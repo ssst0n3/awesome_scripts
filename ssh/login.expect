@@ -2,10 +2,10 @@
 
 set timeout -1
 
-spawn ssh -o StrictHostKeyChecking=no ctf@10.0.1.1
+spawn ssh -o StrictHostKeyChecking=no USERNAME@IP:PORT
 
 expect "assword:"
 
-send "SqjaVwE9\r"
+send "PASSWORD\r"
 
 interact

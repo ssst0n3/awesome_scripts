@@ -55,6 +55,8 @@
 * login.expect: login into ssh server
   * usage: `./login.expect`
 * scp_download.expect
-  * usage: `./scp_download.expect <REMOTE FILE PATH>`
+  * usage: `./scp_download.expect RmoteFilePath [LocalFilePath]`
 * scp_upload.expect
-  * usage: `./scp_upload.expect <LOCAL FILE PATH> <REMOTE FILE PATH>`
+  * usage: `./scp_upload.expect LocalFilePath [RemoteFilePath]`
+* init.sh: Replace the ssh address and credentials in the expect scripts
+  * usage: `./init.sh Ip Port Username Password`

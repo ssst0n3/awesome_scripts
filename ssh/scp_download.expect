@@ -4,11 +4,11 @@ set timeout -1
 
 set arg1 [lindex $argv 0]
 
-spawn scp -o StrictHostKeyChecking=no ctf@10.0.1.1:$arg1 ./
+spawn scp -P PORT -o StrictHostKeyChecking=no USERNAME@IP:$arg1 ./
 
 expect "assword:"
 
-send "SqjaVwE9\r"
+send "PASSWORD\r"
 
 
 
