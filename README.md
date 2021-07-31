@@ -32,6 +32,8 @@
 ## linux
 * clean_google-chrome_cache.sh
   * usage: `./clean_google-chrome_cache.sh`
+* clean_homebrew-core.sh
+  * usage: `./clean_homebrew-core.sh`
 * clean_jetbrians_cache.sh
   * usage: `./clean_jetbrians_cache.sh`
 * clean_journal_logs.sh
