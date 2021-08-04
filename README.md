@@ -49,6 +49,10 @@
 * crates.io: ruby mirror
   * usage: `cp ./crates.io ~/.cargo/config`
 
+## nginx
+* ssl_proxy: a ssl proxy 
+  * usage: `docker-compose up -d`
+
 ## qemu
 * shrunk.sh: compress qemu disk file
   * usage: `./shrunk.sh <DISK FILE PATH>`

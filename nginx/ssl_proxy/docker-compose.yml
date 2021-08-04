@@ -1,0 +1,22 @@
+version: '3'
+services:
+  secret:
+    image: ssst0n3/docker_secret:1.4.1
+    environment:
+      - "DIR_SECRET=/secret"
+      - "SECRET=CERT_APP_TLS"
+    volumes:
+      - app_secret:/secret
+  nginx:
+    image: nginx
+    restart: always
+    ports:
+      - "6443:443"
+    depends_on:
+      - secret
+    volumes:
+      - app_secret:/etc/nginx/certs/
+      - ./nginx.conf:/etc/nginx/conf.d/nginx.conf
+
+volumes:
+  app_secret:
