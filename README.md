@@ -29,6 +29,10 @@
 * clean.sh: clean golang's cache
 * test.sh: golang test script, do not use testcache, single thread
 
+## java
+* run.sh
+  * usage: `./run.sh qualified-class-name [args]`
+
 ## linux
 * clean_google-chrome_cache.sh
   * usage: `./clean_google-chrome_cache.sh`
