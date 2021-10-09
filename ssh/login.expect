@@ -1,7 +1,6 @@
 #!/usr/bin/expect
 
 set timeout -1
-ssh-keygen -f "$HOME/.ssh/known_hosts" -R "IP"
 spawn ssh -o StrictHostKeyChecking=no USERNAME@IP -p PORT
 
 expect "assword:"
