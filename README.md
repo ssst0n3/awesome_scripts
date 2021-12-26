@@ -49,6 +49,10 @@
 * list_listening_ports-lsof.sh
   * usage: `./list_listening_ports-lsof.sh`
 
+## media
+* convert2gif.sh
+  * usage: `./convert2gif.sh <FILENAME> <WIDTH>`
+
 ## mirror
 * crates.io: ruby mirror
   * usage: `cp ./crates.io ~/.cargo/config`
