@@ -48,6 +48,9 @@
   * usage: `./clean_vscode_cache.sh`
 * list_listening_ports-lsof.sh
   * usage: `./list_listening_ports-lsof.sh`
+* terminal-set-title.bashrc
+  * only works for bash
+  * usage: `source ./terminal-set-title.bashrc; set-title <TITLE>`
 
 ## media
 * convert2gif.sh
