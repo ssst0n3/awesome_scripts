@@ -1,0 +1,7 @@
+#!/usr/bin/expect -f
+set timeout -1
+set arg1 [lindex $argv 0]
+set arg2 [lindex $argv 1]
+
+spawn scp -P PORT -o StrictHostKeyChecking=no -i CERT "$arg1" USERNAME@IP:$arg2
+interact

@@ -69,11 +69,18 @@
   * usage: `./shrunk.sh <DISK FILE PATH>`
 
 ## ssh
-* login.expect: login into ssh server
-  * usage: `./login.expect`
-* scp_download.expect
-  * usage: `./scp_download.expect RmoteFilePath [LocalFilePath]`
-* scp_upload.expect
-  * usage: `./scp_upload.expect LocalFilePath [RemoteFilePath]`
-* init.sh: Replace the ssh address and credentials in the expect scripts
-  * usage: `./init.sh Ip Port Username Password`
+* cert
+  * login.expect: login into ssh server
+    * usage: `./login.expect`
+  * scp_download.expect
+    * usage: `./scp_download.expect RmoteFilePath [LocalFilePath]`
+  * scp_upload.expect
+    * usage: `./scp_upload.expect LocalFilePath [RemoteFilePath]`
+  * init.sh: Replace the ssh address and credentials in the expect scripts
+    * usage: `./init.sh Ip Port Username CertFilePath`
+* pwd
+  * login.expect: as same as cert
+  * scp_download.expect: as same as cert
+  * scp_upload.expect: as same as cert
+  * init.sh: Replace the ssh address and credentials in the expect scripts
+    * usage: `./init.sh Ip Port Username Password`
