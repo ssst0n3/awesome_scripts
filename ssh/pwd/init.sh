@@ -1,4 +1,7 @@
 #!/bin/bash
+
+ssh-keygen -f "$HOME/.ssh/known_hosts" -R "$1"
+
 Usage(){
     cat <<EOF
 Replace the ssh address and credentials in the expect scripts
@@ -21,4 +24,3 @@ sed -i s/IP/$1/g *.expect
 sed -i s/PORT/$2/g *.expect
 sed -i s/USERNAME/$3/g *.expect
 sed -i s/PASSWORD/$4/g *.expect
-ssh-keygen -f "$HOME/.ssh/known_hosts" -R "$1"
