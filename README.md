@@ -33,6 +33,10 @@
 * run.sh
   * usage: `./run.sh qualified-class-name [args]`
 
+## k8s
+* pod_netstat.sh
+  * usage: `./pod_netstat.sh <POD_ID>`
+
 ## linux
 * clean_google-chrome_cache.sh
   * usage: `./clean_google-chrome_cache.sh`
