@@ -37,9 +37,7 @@ set_extension() {
 
 [ "$1" = "-h" -o "$1" = "--help" -o "$#" -ne 4 ] && Usage
 set_extension
-set -ex
-
-sed $extension s/IP/$1/g *.expect
+sed ${extension} s/IP/$1/g *.expect
 sed ${extension} s/PORT/$2/g *.expect
 sed ${extension} s/USERNAME/$3/g *.expect
 sed ${extension} s@CERT@$4@g *.expect
