@@ -35,7 +35,7 @@ set_extension() {
     esac
 }
 
-# [ "$1" = "-h" -o "$1" = "--help" -o "$#" -ne 4 ] && Usage
+[ "$1" = "-h" -o "$1" = "--help" -o "$#" -ne 4 ] && Usage
 set_extension
 set -ex
 
