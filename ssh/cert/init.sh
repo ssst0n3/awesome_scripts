@@ -1,5 +1,4 @@
 #!/bin/bash
-set -ex
 Usage(){
     cat <<EOF
 Replace the ssh address and credentials in the expect scripts
