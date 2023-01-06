@@ -31,7 +31,7 @@ detect_os() {
 _sed() {
     case "${machine}" in 
         Linux)   sed -i $@;;
-        Mac)     sed -i'' $@;;
+        Mac)     sed -i '' $@;;
     esac
 }
 
