@@ -1,4 +1,5 @@
 #!/bin/bash
+set -ex
 Usage(){
     cat <<EOF
 Replace the ssh address and credentials in the expect scripts
@@ -27,18 +28,17 @@ detect_os() {
     esac
 }
 
-set_extension() {
-    detect_os
+_sed() {
     case "${machine}" in 
-        Linux)   extension="-i";;
-        Mac)     extension="-i ''";;
+        Linux)   sed -i $@;;
+        Mac)     sed -i'' $@;;
     esac
 }
 
 [ "$1" = "-h" -o "$1" = "--help" -o "$#" -ne 4 ] && Usage
-set_extension
-sed ${extension} s/IP/$1/g *.expect
-sed ${extension} s/PORT/$2/g *.expect
-sed ${extension} s/USERNAME/$3/g *.expect
-sed ${extension} s@CERT@$4@g *.expect
+detect_os
+_sed s/IP/$1/g *.expect
+_sed s/PORT/$2/g *.expect
+_sed s/USERNAME/$3/g *.expect
+_sed s@CERT@$4@g *.expect
 ssh-keygen -f "$HOME/.ssh/known_hosts" -R "$1"
