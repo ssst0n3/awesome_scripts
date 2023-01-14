@@ -88,3 +88,5 @@
   * scp_upload.expect: as same as cert
   * init.sh: Replace the ssh address and credentials in the expect scripts
     * usage: `./init.sh Ip Port Username Password`
+* ssh_config_file.sh: ssh by config file
+  * usage: `./ssh_config_file.sh Hostname Ip Username Identifile`
