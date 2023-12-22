@@ -55,6 +55,9 @@
 * terminal-set-title.bashrc
   * only works for bash
   * usage: `source ./terminal-set-title.bashrc; set-title <TITLE>`
+* restart-network.sh
+  * restart network
+  * usage: `./restart-network.sh`
 
 ## media
 * convert2gif.sh
