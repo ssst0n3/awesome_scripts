@@ -1,7 +1,7 @@
 #!/bin/bash
 set -x
-# sudo modprobe -r iwlwifi
-# sudo modprobe iwlwifi
+sudo modprobe -r iwlmvm
+sudo modprobe iwlmvm
 sudo service NetworkManager restart
 sudo service network-manager restart
 sudo nmcli networking off 
